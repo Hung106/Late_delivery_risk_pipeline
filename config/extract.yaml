@@ -1,0 +1,49 @@
+source:
+  type: postgresql
+
+bronze:
+
+  output_path: data/bronze
+
+  format: parquet
+
+  partition_by: ingestion_date
+
+
+tables:
+
+  customers:
+    load_type: full
+    enabled: true
+
+  geolocation:
+    load_type: full
+    enabled: true
+
+  orders:
+    load_type: full
+    enabled: true
+
+  order_items:
+    load_type: full
+    enabled: true
+
+  order_payments:
+    load_type: full
+    enabled: true
+
+  order_reviews:
+    load_type: full
+    enabled: true
+
+  products:
+    load_type: full
+    enabled: true
+
+  sellers:
+    load_type: full
+    enabled: true
+
+  product_category_name_translation:
+    load_type: full
+    enabled: true
