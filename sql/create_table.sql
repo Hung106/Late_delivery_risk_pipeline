@@ -81,4 +81,24 @@ CREATE TABLE product_category_name_translation (
     product_category_name_english VARCHAR(100)
 );
 
+CREATE TABLE IF NOT EXISTS pipeline_run_history (
+    run_id SERIAL PRIMARY KEY,
+    batch_id VARCHAR(100),
+    table_name VARCHAR(100),
+    load_type VARCHAR(50),
+    start_time TIMESTAMP,
+    end_time TIMESTAMP,
+    rows_extracted INT,
+    status VARCHAR(50),
+    error_message TEXT
+);
 
+CREATE TABLE IF NOT EXISTS pipeline_metadata (
+    table_name VARCHAR(100) PRIMARY KEY,
+    load_type VARCHAR(50),
+    watermark_column VARCHAR(100),
+    last_watermark VARCHAR(255),
+    last_batch_id VARCHAR(100),
+    last_run_time TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

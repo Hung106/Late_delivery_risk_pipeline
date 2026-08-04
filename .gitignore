@@ -50,3 +50,10 @@ data/gold/
 
 # Notebook
 .ipynb_checkpoints/
+
+.log# =========================
+# Logs
+# =========================
+*.log
+logs/
+airflow/logs/
