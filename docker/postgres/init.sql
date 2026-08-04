@@ -104,3 +104,29 @@ CREATE TABLE IF NOT EXISTS pipeline_metadata (
     last_run_time TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO pipeline_metadata
+(
+ table_name,
+ load_type,
+ watermark_column
+)
+VALUES
+
+('customers','full',NULL),
+
+('geolocation','full',NULL),
+
+('orders','incremental','order_purchase_timestamp'),
+
+('order_items','incremental','order_purchase_timestamp'),
+
+('order_payments','full',NULL),
+
+('order_reviews','incremental','review_creation_date'),
+
+('products','full',NULL),
+
+('sellers','full',NULL),
+
+('product_category_name_translation','full',NULL);
