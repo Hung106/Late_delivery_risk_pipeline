@@ -1,13 +1,13 @@
 # 🚚 Olist Late Delivery Risk Pipeline
 
-## 📌 Overview
+## Overview
 
 Dự án xây dựng một **End-to-End Data Engineering Pipeline** trên bộ dữ liệu thương mại điện tử Olist nhằm phân tích rủi ro giao hàng trễ.
 
 Hệ thống xử lý dữ liệu từ nguồn OLTP, xây dựng Data Lake và Data Warehouse theo mô hình **Medallion Architecture**, tự động hóa pipeline bằng **Apache Airflow** và cung cấp dashboard phân tích bằng **Streamlit**.
 
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Olist Dataset
@@ -32,7 +32,7 @@ Streamlit Dashboard
 ```
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |---|---|
@@ -45,7 +45,7 @@ Streamlit Dashboard
 | Environment | Docker |
 
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Late_delivery_risk_pipeline
@@ -65,7 +65,7 @@ Late_delivery_risk_pipeline
 ```
 
 
-# 🚀 Getting Started
+# Getting Started
 
 
 ## 1. Clone repository
@@ -109,7 +109,7 @@ streamlit run src/streamlit/app.py
 ```
 Dashboard local: http://localhost:8501
 
-# 📈 Outcome
+# Outcome
 
 - Xây dựng pipeline xử lý dữ liệu end-to-end.
 - Áp dụng Medallion Architecture cho Data Lake.
